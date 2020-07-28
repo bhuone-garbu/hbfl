@@ -1,9 +1,10 @@
 const glob = require('glob')
+const path = require('path')
 const fs = require('fs')
 
 function getPublicFiles () {
   return new Promise((resolve, reject) => {
-    glob('../../public/**/*.*', (err, files) => {
+    glob('public/**/*.*', (err, files) => {
       if (err) reject(err)
       else {
         const filePromises = files.map((file) => {
@@ -20,7 +21,7 @@ function getPublicFiles () {
           return fileContents.map((contents, i) => {
             return {
               contents,
-              name: files[i].replace('../../public/', '')
+              name: files[i].replace('public/', '')
             }
           })
         })
