@@ -6,7 +6,7 @@ AWS.config.update({ region: 'eu-west-1' })
 // Declare local variables
 const ec2 = new AWS.EC2()
 
-createImage('i-09dedfe239dee1ced', 'hamsterImage')
+createImage('i-071100d95cedf661c', 'hamsterImage')
 .then(() => console.log('Complete'))
 
 function createImage (seedInstanceId, imageName) {
