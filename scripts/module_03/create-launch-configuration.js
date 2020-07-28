@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk')
 const helpers = require('./helpers')
 
-AWS.config.update({ region: '/* TODO: add your region */' })
+AWS.config.update({ region: 'eu-west-1' })
 
 // Declare local variables
 // TODO: Create an autoscaling object
